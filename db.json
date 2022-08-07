@@ -1,0 +1,99 @@
+{
+  "users": [
+    {
+      "email": "dactrong2001@gmail.com.vn",
+      "password": "$2a$10$F5Zud5QocrOm7BZcB3rHN.TYML0aAnBSlkmVGsR20wf311akvbVLS",
+      "phone": "0963209332",
+      "role": 1,
+      "id": 2
+    },
+    {
+      "email": "trongndph13723@fpt.edu.vn",
+      "password": "$2a$10$SU4ODdMsHbG8dfbKVFdk8.pfYft4skOJFp6WIEPHgMsCKmGCkTo32",
+      "phone": "0963209332",
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "name": "điện thoại ",
+      "id": 1,
+      "status": 0
+    },
+    {
+      "name": "máy tính ",
+      "id": 2,
+      "status": 0
+    },
+    {
+      "name": "tai nghe",
+      "id": 3,
+      "status": 0
+    },
+    {
+      "name": "laptop",
+      "id": 4,
+      "status": 0
+    }
+  ],
+  "products": [
+    {
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1658452728/gznrsrl5j9anxrsem3jx.jpg",
+      "name": "12qwe12",
+      "saleOffPrice": 12,
+      "feature": "qweqweqw",
+      "description": "qweqwe",
+      "categoryId": 2,
+      "id": 8,
+      "status": 1,
+      "originalPrice": 13123,
+      "brief": "12323434234á á á"
+    },
+    {
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1658452729/pfaqwu6rojwxtbtcdzx1.jpg",
+      "name": "12qwe12",
+      "saleOffPrice": 12,
+      "feature": "qweqweqw",
+      "description": "qweqwe",
+      "categoryId": 2,
+      "id": 9,
+      "status": 1
+    },
+    {
+      "name": "Nguyễn Đắc Trọng",
+      "originalPrice": 13123,
+      "saleOffPrice": 11,
+      "feature": "234234",
+      "desc": "234234",
+      "brief": "ảnh dẹp quá trời luôn",
+      "categoryId": 3,
+      "status": 1,
+      "img": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659752024/anhhtus/znjtqt9uuwowpykyhxhl.jpg",
+      "id": 10
+    },
+    {
+      "name": "123123",
+      "originalPrice": 12312,
+      "saleOffPrice": 123,
+      "feature": "123123",
+      "desc": "123132",
+      "brief": "fdfg",
+      "categoryId": 2,
+      "status": 1,
+      "img": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659752066/anhhtus/e0hucvoie4vqntk7wo6m.jpg",
+      "id": 11
+    },
+    {
+      "name": "ádasd",
+      "originalPrice": 13123,
+      "saleOffPrice": 12,
+      "feature": "12312",
+      "desc": "12312",
+      "brief": "ádas",
+      "categoryId": 1,
+      "status": 0,
+      "img": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659752286/anhhtus/vwfcyhes3o7jacgytx01.jpg",
+      "id": 12
+    }
+  ]
+}
