@@ -29,9 +29,9 @@ const Cart1 = () => {
           <Row>
             <Col span={8}>
               {" "}
-              <Link to="/"> Trở về</Link>
+              <Link to="/"> <P22><LeftOutlined />Trở về</P22></Link>
             </Col>
-            <Col span={8}> Giỏ hàng</Col>
+            <Col span={8}> <P22>Giỏ hàng</P22></Col>
           </Row>
 
           {cart.cart?.map((item: any) => {
@@ -110,7 +110,7 @@ const Cart1 = () => {
                 <p>Tổng tiền tam tính : </p>
               </Col>
               <Col>
-                <Text type="danger">{cart.total.toLocaleString()}</Text>
+                <Text type="danger">{cart.total.toLocaleString()}đ</Text>
               </Col>
             </Row>
           </div>
@@ -127,6 +127,9 @@ const Cart1 = () => {
     </>
   );
 };
+const P22 = styled.p`
+   color: red;
+`
 const Bttt = styled.button`
   border: none;
   background-color: white;
@@ -190,7 +193,7 @@ const Div1 = styled.div`
 const Container = styled.div`
   max-width: 500px;
   margin: auto;
-  border: 1px solid red;
+
   margin-top: 20px;
 `;
 

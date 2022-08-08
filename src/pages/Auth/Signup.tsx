@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Typography, Col, Row, Button, Form, Input, message } from "antd";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Img2 from "../../assets/images/logo.png";
 import FaceboookT from "../../assets/image/Rectangle.png";
 import Google from "../../assets/image/Rectangle (1).png";
@@ -97,7 +97,7 @@ const Signup: React.FC = () => {
             </Form>
           </OutForm>
           <UploadWrapper>
-            <Img src={Img2} />
+          <Link to="/"><Img src={Img2} /></Link>
           </UploadWrapper>
         </OutLog>
       </Container2>

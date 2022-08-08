@@ -46,57 +46,38 @@ const Header = () => {
           <div>
             <Image2 src={ImageLogo3} />
           </div>
-          <Link className="text-white" to={`/cart`}>
-            Giỏ hàng
+          <Link  to={`/cart`} >
+            <P1> Giỏ hàng</P1>
           </Link>
         </Vitri>
 
         {a == null ? (
           <div>
-            <div className="dropdown">
-              <a
-                className="dropdown-toggle text-sm text-white font-normal"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Tài khoản
-              </a>
-              <ul className="dropdown-menu">
-                <li>
+            <Div33 >
+             
+             
                   <Link
                     className="dropdown-item text-sm font-normal"
                     to={`/signin`}
                   >
-                    Đăng nhập
+                    <P1>Đăng nhập</P1>
                   </Link>
-                </li>
-                <li>
+                
                   <Link
                     className="dropdown-item text-sm font-normal"
                     to={`/signup`}
                   >
-                    Đăng kí
+                   <P1>Đăng kí</P1>
                   </Link>
-                </li>
-              </ul>
-            </div>
+                
+            </Div33>
           </div>
         ) : (
           <div>
-            <div className="dropdown">
-              <a
-                className="dropdown-toggle text-sm text-white font-normal"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Tài khoản
-              </a>
-              <ul className="dropdown-menu">
-                <li>
+            <Div33 className="dropdown">
+            
+             
+               
                   {a.user.role == 1 ? (
                     <div className="py-1">
                       <NavLink
@@ -105,15 +86,15 @@ const Header = () => {
                         className="dropdown-item text-sm font-normal"
                         role="menuitem"
                       >
-                        DashBoard
+                         <P1>Admin</P1>
                       </NavLink>
                     </div>
                   ) : (
                     <div></div>
                   )}
-                </li>
-                <li>
-                  <button
+                
+              
+                  <Btt2
                     value="1"
                     tabIndex={3}
                     className="dropdown-item text-sm font-normal"
@@ -122,10 +103,10 @@ const Header = () => {
                     onClick={(e) => handleClick(e, "clicked")}
                   >
                     Đăng xuất
-                  </button>
-                </li>
-              </ul>
-            </div>
+                  </Btt2>
+               
+              
+            </Div33>
           </div>
         )}
       </Container>
@@ -134,6 +115,21 @@ const Header = () => {
 };
 
 export default Header;
+
+const P1 = styled.div`
+  color: white;
+  padding-right: 10px;
+`
+
+const Div33 = styled.div`
+  display: flex;
+ 
+`
+const Btt2 = styled.button`
+   border: none;
+   color:white;
+   background-color:red;
+`
 
 const Logo = styled.img`
   width: 65px;

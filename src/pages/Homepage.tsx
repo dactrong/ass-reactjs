@@ -44,19 +44,7 @@ const styles: React.CSSProperties = {
 type Props = {};
 
 const Homepage = (props: Props) => {
-  useEffect(() => {
-    const getProducts = async () => {
-      const { data } = await listProduct();
-      setProduct(data);
-    };
-    const getCategories = async () => {
-      const { data } = await listCategory();
-      setCategory(data);
-      console.log(data);
-    };
-    getCategories();
-    getProducts();
-  }, []);
+
   
 
   const [category, setCategory] = useState<CategoryType[]>([]);
@@ -87,23 +75,7 @@ const Homepage = (props: Props) => {
 
   return (
     <>
-    <Space>
-        <Select
-          placeholder="Danh mục cần tìm kiếm"
-          onChange={onFilerCategory}
-          allowClear={true}
-        >
-          {category.map((item, index) => {
-            return (
-              <Option value={item.id} key={index}>
-                {item.name}
-              </Option>
-            );
-          })}
-        </Select>
-
-        
-      </Space>
+   
       <Container>
         <Row>
           <Col span={6}>
@@ -136,15 +108,15 @@ const Homepage = (props: Props) => {
                     </Link>
                     <Row>
                       <Col span={12}>
-                        <Text type="danger">{product.saleOffPrice}</Text>
+                        <Text type="danger">{product.saleOffPrice.toLocaleString()}đ</Text>
                       </Col>
                       <Col span={12}>
-                        <Text type="secondary">{product.originalPrice}</Text>
+                        <Text type="secondary">{product.originalPrice.toLocaleString()}đ</Text>
                       </Col>
                     </Row>
                     <Borders>
                       <Text>[HOT]</Text>
-                      {product.desc}
+                      {product.brief}
                     </Borders>
                     <br />
                     <Row>
