@@ -1,120 +1,197 @@
+import { Col, Row, Typography } from "antd";
 import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+// import LogoImage from "../../assets/image/Rectangle.png";
+import { StarOutlined, CloseOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { InputNumber } from "antd";
 import cartSlice from "./cartSlice.js";
 import { LeftOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
-const Cart = () => {
+const { Text, Title } = Typography;
+
+const Cart1 = () => {
   const { cart } = useSelector((store) => store);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const increase = (id: string) => {
-    dispatch(cartSlice.actions.increase(id))
-  }
+    dispatch(cartSlice.actions.increase(id));
+  };
   const decrease = (id: string) => {
-    dispatch(cartSlice.actions.decrease(id))
-  } 
+    dispatch(cartSlice.actions.decrease(id));
+  };
   const remove = (id: string) => {
-    dispatch(cartSlice.actions.remove(id))
-  }
+    dispatch(cartSlice.actions.remove(id));
+  };
   return (
-    <div className="flex h-full flex-col bg-white shadow-xl w-1/3 m-auto">
-      <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
-        <div className="flex items-center justify-start">
-          <Link to={`/`} className="flex items-center">
-            <LeftOutlined />
-            <p className="pt-2.5">Trở về</p>
-          </Link>
-          <h2
-            className="text-lg font-medium text-gray-900 ml-32"
-            id="slide-over-title"
-          >
-            Giỏ hàng
-          </h2>
-        </div>
+    <>
+      <Container>
+        <div>
+          <Row>
+            <Col span={8}>
+              {" "}
+              <Link to="/"> Trở về</Link>
+            </Col>
+            <Col span={8}> Giỏ hàng</Col>
+          </Row>
 
-        <div className="mt-8">
-          <div className="flow-root">
-            <ul role="list" className="-my-6 divide-y divide-gray-200">
-              {cart.cart?.map((item: any) => {
-                return (
-                  <li className="flex py-6">
-                    <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                      <img
-                        src={item.img}
-                        className="h-full w-full object-cover object-center"
-                      />
+          {cart.cart?.map((item: any) => {
+            return (
+              <Div5>
+                <Row>
+                  <Col span={12}>
+                    <Im src={item.img} alt="" width="200px" />
+                  </Col>
+
+                  <Col span={12}>
+                    <div>
+                      <Row>
+                        <Col span={18}>
+                          <h4>{item.name}</h4>
+                        </Col>
+                        <Col span={6}>
+                          <Btt onClick={() => remove(item.id)}>x</Btt>
+                        </Col>
+                      </Row>
                     </div>
-
-                    <div className="ml-4 flex flex-1 flex-col">
-                      <div>
-                        <div className="flex justify-between">
-                          <p className="font-semibold">
-                            {item.name}
-                          </p>
-                          <div className="flex">
-                            <button
-                              type="button"
-                              className="font-bold text-black-600 hover:text-indigo-500"
-                              onClick={() => remove(item.id)}
-                            >
-                              X
-                            </button>
-                          </div>
-                        </div>
-                        <div className="flex items-center">
-                          <p className="font-semibold text-rose-800">
-                            {(item.originalPrice - item.saleOffPrice).toLocaleString()} <u>đ</u>
-                          </p>
-                          <p className="ml-2 mt-1">{item.originalPrice.toLocaleString()} <u>đ</u></p>
-                        </div>
-                      </div>
-                      <div className="flex text-sm">
-                        <p className="mr-2">Chọn số lượng: </p>
-                        <div className="cart-item quantity">
-                          <button className="click-1" onClick={() => decrease(item.id)}>
+                    <Div1>
+                      <Row>
+                        <Col span={6}>
+                          <P1>
+                            {(
+                              item.originalPrice - item.saleOffPrice
+                            ).toLocaleString()}{" "}
+                            đ
+                          </P1>
+                        </Col>
+                        <Col span={6}>
+                          <p>{item.originalPrice.toLocaleString()} đ</p>
+                        </Col>
+                        <Col span={6}>
+                          <P2>Giảm 27%</P2>
+                        </Col>
+                      </Row>
+                    </Div1>
+                    <Div3>
+                      <Row>
+                        <Col span={8}>Chọn số lượng :</Col>
+                        <Col span={10}>
+                          <Bttt
+                            className="click-1"
+                            onClick={() => decrease(item.id)}
+                          >
                             -
-                          </button>
-                          <input disabled type="text" value={item.amount} />
-                          <button className="click-2" onClick={() => increase(item.id)}>
+                          </Bttt>
+                          <Inn disabled type="text" value={item.amount} />
+                          <Bttt
+                            className="click-2"
+                            onClick={() => increase(item.id)}
+                          >
                             +
-                          </button>
-                        </div>
+                          </Bttt>
+                        </Col>
+                      </Row>
+                    </Div3>
+                    <Div2>
+                      <p>- Chương trình khuyến mại:</p>
+                      <Text>
+                        {item.desc}
+                      </Text>
+                    </Div2>
+                  </Col>
+                </Row>
+                <hr />
+              </Div5>
+            );
+          })}
 
-
-                      </div>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
+          <div>
+            <Row>
+              <Col span={19}>
+                <p>Tổng tiền tam tính : </p>
+              </Col>
+              <Col>
+                <Text type="danger">{cart.total.toLocaleString()}</Text>
+              </Col>
+            </Row>
           </div>
+          <Div6>
+            <Bt6>Tiến hành đặt hàng</Bt6>
+          </Div6>
+          <Div6>
+            <Link to="/">
+              <Bt7>Chọn thêm sản phẩm khác</Bt7>
+            </Link>
+          </Div6>
         </div>
-      </div>
-
-      <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
-        <div className="flex justify-between text-base font-medium text-gray-900">
-          <p>Tổng tiền tạm tính</p>
-          <p>{cart.total.toLocaleString()} <u>đ</u></p>
-        </div>
-        <div className="">
-          <a
-            href="#"
-            className="flex items-center justify-center rounded-md border border-transparent bg-red-600 px-6 py-3 text-sm text-white shadow-sm hover:bg-red-500"
-          >
-            TIẾN HÀNH ĐẶT HÀNG
-          </a>
-        </div>
-        <div className="mt-2">
-          <a
-            href="#"
-            className="flex items-center justify-center rounded-md border border-transparent bg-neutral-50 px-6 py-3 text-sm text-red-600 shadow-sm hover:bg-neutral-100"
-          >
-            CHỌN THÊM SẢN PHẨM KHÁC
-          </a>
-        </div>
-      </div>
-    </div>
+      </Container>
+    </>
   );
 };
+const Bttt = styled.button`
+  border: none;
+  background-color: white;
+`;
+const Inn = styled.input`
+  width: 30px;
+  border: none;
+`;
+const Btt = styled.button`
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+`;
+const Bt7 = styled.button`
+  padding: 5px 165px;
+  color: red;
+  border: 1px solid red;
+  margin-top: 10px;
+`;
+const Div6 = styled.div`
+  text-align: center;
+`;
+const Bt6 = styled.button`
+  background-color: red;
+  padding: 5px 187px;
+  color: white;
+`;
+const Div5 = styled.div`
+  padding-top: 20px;
+`;
+const Im = styled.img`
+  padding-left: 20px;
+`;
+const In = styled.input`
+  width: 50px;
+`;
+const Div3 = styled.div`
+  font-size: 10px;
+`;
+const Div2 = styled.div`
+  background-color: #f6f6f6;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 10px;
+`;
+const P2 = styled.p`
+  color: white;
+  background: red;
+  border-radius: 5px;
+  text-align: center;
+`;
+const P1 = styled.p`
+  color: red;
+  font-weight: bold;
+`;
+const Div1 = styled.div`
+  font-size: 10px;
+`;
+const Container = styled.div`
+  max-width: 500px;
+  margin: auto;
+  border: 1px solid red;
+  margin-top: 20px;
+`;
 
-export default Cart;
+export default Cart1;

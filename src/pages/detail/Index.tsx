@@ -81,24 +81,7 @@ const DetailPage = () => {
                   <Ima src={product?.img} />
                 </div>
                 <div>
-                  <Row>
-                    <Col span={4}>
-                      <Img1 src={Image1} />
-                    </Col>
-                    <Col span={4}>
-                      <Img1 src={Image1} />
-                    </Col>
-                    <Col span={4}>
-                      {" "}
-                      <Img1 src={Image1} />
-                    </Col>
-                    <Col span={4}>
-                      <Img1 src={Image1} />
-                    </Col>
-                    <Col span={4}>
-                      <Img1 src={Image1} />
-                    </Col>
-                  </Row>
+                  
                 </div>
               </Dv2>
             </Col>
@@ -117,8 +100,7 @@ const DetailPage = () => {
               </div>
               <div>
                 <Text>
-                  {" "}
-                  Mdescription
+                {product?.desc}
                 </Text>
               </div>
 

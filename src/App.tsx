@@ -20,9 +20,9 @@ import Signup from "./pages/Auth/signup";
 import CheckSignin from "./utils/CheckSigin";
 import PrivateRouter from "./utils/PrivateRoute";
 import { listProduct } from "./api/product";
-import Cart from "./pages/Cart/Cart";
 import ProductDetail from "./pages/detail/detail";
 import Cart1 from "./pages/Cart/addToCart";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -39,10 +39,10 @@ function App() {
       <Routes>
         <Route path="/signin" element={<CheckSignin><Signin/></CheckSignin>}></Route>
         <Route path="/signup" element={<CheckSignin><Signup/></CheckSignin>}></Route>
-        
         <Route path="/" element={<ClientLayout />}>
           <Route index element={<Homepage />} />
           <Route path="/cart" element={<Cart/>}/>
+
           <Route path="products" element={<Prooduct  />} />
           <Route path="detail/:id" element={<DetailPage />} />
           {/* <Route path="detail/:id" element={<ProductDetail />} /> */}
