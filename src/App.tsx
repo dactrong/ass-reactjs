@@ -15,13 +15,11 @@ import Category from "./pages/admin/category/Category";
 import AddCategory from "./pages/admin/category/AddCategory";
 import EditCategory from "./pages/admin/category/EditCategory";
 import DetailPage from "./pages/detail/Index";
-import Signin from "./pages/Auth/signin";
-import Signup from "./pages/Auth/signup";
+import Signin from "./pages/Auth/Signin";
+import Signup from "./pages/Auth/Signup";
 import CheckSignin from "./utils/CheckSigin";
 import PrivateRouter from "./utils/PrivateRoute";
 import { listProduct } from "./api/product";
-import ProductDetail from "./pages/detail/detail";
-import Cart1 from "./pages/Cart/addToCart";
 import Cart from "./pages/Cart/Cart";
 
 function App() {

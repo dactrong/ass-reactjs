@@ -4,11 +4,15 @@ import { Breadcrumb, Layout, Menu } from "antd";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
-import Image1 from "../../assets/image/Rectangle11.png";
+import Image1 from "../../assets/image/Rectangle (3).png";
+import Image2 from "../../assets/image/Rectangle (4).png";
+import Image3 from "../../assets/image/Rectangle (5).png";
+import Image4 from "../../assets/image/Rectangle (6).png";
+
 const { Text, Title } = Typography;
 
 import Card from "antd/lib/card/Card";
-import LogoImage from "../../assets/image/Rectangle.png";
+import LogoImage from "../../assets/image/Rectangle2.png";
 import { StarOutlined } from "@ant-design/icons";
 import { ProductType } from "../../types/ProductType";
 import { productID } from "../../api/product";
@@ -129,7 +133,44 @@ const DetailPage = () => {
                 <div>
                   <Card
                     hoverable
-                    cover={<Image alt="example" src={LogoImage} />}
+                    cover={<Image alt="example" src={Image1} />}
+                  >
+                    <Title level={5}>Samsung Galaxy S22 Untra </Title>
+                    <Row>
+                      <Col span={12}>
+                        <Text type="danger">10.790.000 ₫</Text>
+                      </Col>
+                      <Col span={12}>
+                        <Text type="secondary">18.000.000 ₫</Text>
+                      </Col>
+                    </Row>
+                    <Borders>
+                      <Text>
+                        [HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá
+                        lên tới 1.000.000đ
+                      </Text>{" "}
+                    </Borders>
+                    <br />
+                    <Row>
+                      <Col span={12}>
+                        <Link to="">{<StarOutlined />}</Link>
+                        <Link to="">{<StarOutlined />}</Link>
+                        <Link to="">{<StarOutlined />}</Link>
+                        <Link to="">{<StarOutlined />}</Link>
+                        <Link to="">{<StarOutlined />}</Link>
+                      </Col>
+                      <Col span={12}>
+                        <Text type="secondary">72 đánh giá</Text>
+                      </Col>
+                    </Row>
+                  </Card>
+                </div>
+              </Col>
+              <Col className="gutter-row" span={6} style={style}>
+                <div>
+                  <Card
+                    hoverable
+                    cover={<Image alt="example" src={Image2} />}
                   >
                     <Title level={5}>iPhone 11 64GB I Chính hãng VN/A</Title>
                     <Row>
@@ -166,9 +207,9 @@ const DetailPage = () => {
                 <div>
                   <Card
                     hoverable
-                    cover={<Image alt="example" src={LogoImage} />}
+                    cover={<Image alt="example" src={Image3} />}
                   >
-                    <Title level={5}>iPhone 11 64GB I Chính hãng VN/A</Title>
+                    <Title level={5}>Xiaomi Redmi Note 11</Title>
                     <Row>
                       <Col span={12}>
                         <Text type="danger">10.790.000 ₫</Text>
@@ -203,46 +244,9 @@ const DetailPage = () => {
                 <div>
                   <Card
                     hoverable
-                    cover={<Image alt="example" src={LogoImage} />}
+                    cover={<Image alt="example" src={Image4} />}
                   >
-                    <Title level={5}>iPhone 11 64GB I Chính hãng VN/A</Title>
-                    <Row>
-                      <Col span={12}>
-                        <Text type="danger">10.790.000 ₫</Text>
-                      </Col>
-                      <Col span={12}>
-                        <Text type="secondary">18.000.000 ₫</Text>
-                      </Col>
-                    </Row>
-                    <Borders>
-                      <Text>
-                        [HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá
-                        lên tới 1.000.000đ
-                      </Text>{" "}
-                    </Borders>
-                    <br />
-                    <Row>
-                      <Col span={12}>
-                        <Link to="">{<StarOutlined />}</Link>
-                        <Link to="">{<StarOutlined />}</Link>
-                        <Link to="">{<StarOutlined />}</Link>
-                        <Link to="">{<StarOutlined />}</Link>
-                        <Link to="">{<StarOutlined />}</Link>
-                      </Col>
-                      <Col span={12}>
-                        <Text type="secondary">72 đánh giá</Text>
-                      </Col>
-                    </Row>
-                  </Card>
-                </div>
-              </Col>
-              <Col className="gutter-row" span={6} style={style}>
-                <div>
-                  <Card
-                    hoverable
-                    cover={<Image alt="example" src={LogoImage} />}
-                  >
-                    <Title level={5}>iPhone 11 64GB I Chính hãng VN/A</Title>
+                    <Title level={5}>iPhone 13 64GB Pro Max</Title>
                     <Row>
                       <Col span={12}>
                         <Text type="danger">10.790.000 ₫</Text>

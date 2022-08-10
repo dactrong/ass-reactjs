@@ -10,7 +10,7 @@ import cartSlice from "./cartSlice.js";
 import { LeftOutlined } from "@ant-design/icons";
 const { Text, Title } = Typography;
 
-const Cart1 = () => {
+const Cart = () => {
   const { cart } = useSelector((store) => store);
   const dispatch = useDispatch();
   const increase = (id: string) => {
@@ -27,11 +27,11 @@ const Cart1 = () => {
       <Container>
         <div>
           <Row>
-            <Col span={8}>
+            <Col span={14}>
               {" "}
               <Link to="/"> <P22><LeftOutlined />Trở về</P22></Link>
             </Col>
-            <Col span={8}> <P22>Giỏ hàng</P22></Col>
+            <Col span={6}> <P22>Giỏ hàng</P22></Col>
           </Row>
 
           {cart.cart?.map((item: any) => {
@@ -39,7 +39,7 @@ const Cart1 = () => {
               <Div5>
                 <Row>
                   <Col span={12}>
-                    <Im src={item.img} alt="" width="200px" />
+                    <Im src={item.img} alt="" width="230px" />
                   </Col>
 
                   <Col span={12}>
@@ -197,4 +197,4 @@ const Container = styled.div`
   margin-top: 20px;
 `;
 
-export default Cart1;
+export default Cart;

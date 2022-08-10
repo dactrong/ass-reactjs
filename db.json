@@ -18,6 +18,12 @@
       "password": "$2a$10$PIlk1OfTyucxECBl0IZwCuw0UMmBA/sgIFfebeQn0WUM6QHMVfJL2",
       "phone": "0963209332",
       "id": 4
+    },
+    {
+      "email": "admin12@gmail.com",
+      "password": "$2a$10$ThuTiRLOl0XxQrs97WeLJ.uogXuUd2W.jr34Ldlg3OX7LFhHyLii2",
+      "phone": "0963209332",
+      "id": 5
     }
   ],
   "categories": [
