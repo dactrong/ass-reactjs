@@ -27,6 +27,7 @@ import { listCategory } from "../../../api/category";
 import { productID, updateProduct } from "../../../api/product";
 import { CategoryType } from "../../../types/CategoryType";
 import { onPreview, upload, validateFile } from "../../../utils/upload";
+import TextEditor from "../../../componets/TextEditor";
 
 type Props = {};
 
@@ -202,11 +203,13 @@ const EditProduct = (props: Props) => {
             </Form.Item>
 
             <Form.Item name="feature" label="Đặc điểm nổi bật">
-              <TextArea rows={5} />
+            <TextEditor/>
+
             </Form.Item>
 
             <Form.Item name="desc" label="Mô tả dài">
-              <TextArea rows={5} />
+            <TextEditor/>
+
             </Form.Item>
 
             <Form.Item>

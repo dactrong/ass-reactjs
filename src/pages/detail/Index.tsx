@@ -34,11 +34,11 @@ const styles: React.CSSProperties = {
 
 const DetailPage = () => {
  
-  const [product, setProduct] = useState<ProductType[]>([]);
+  const [product, setProduct] = useState<ProductType>();
   const { id } = useParams();
   useEffect(() => {
     const getProduct = async () => {
-      const { data } = await productID(id);
+      const { data } = await productID(id as string);
       setProduct(data);
       console.log(data);
       
@@ -94,17 +94,18 @@ const DetailPage = () => {
                 <Row>
                   <Col span={8}>
                     <Title level={2} type="danger">
-                    {product?.saleOffPrice} đ
+                    {product?.saleOffPrice.toLocaleString()} đ
                     </Title>
                   </Col>
                   <Col span={4}>
-                    <Text>{product?.originalPrice} đ</Text>
+                    <Text><Spann>{product?.originalPrice.toLocaleString()}</Spann> đ</Text>
                   </Col>
                 </Row>
               </div>
               <div>
                 <Text>
-                {product?.desc}
+                
+                <span dangerouslySetInnerHTML={{__html: product?. brief}}></span>
                 </Text>
               </div>
 
@@ -285,68 +286,22 @@ const DetailPage = () => {
           <Div4>
             <H33>ĐẶC ĐIỂM NỔI BẬT</H33>
             <Text>
-              Camera chất lượng, bắt trọn từng khoảng khắc - Cụm 4 camera với
-              cảm biến chính lên đến 108 MP
+            <span dangerouslySetInnerHTML={{__html: product?.brief}}></span>
+
             </Text>{" "}
             <br />
-            <Text>
-              Camera chất lượng, bắt trọn từng khoảng khắc - Cụm 4 camera với
-              cảm biến chính lên đến 108 MP
-            </Text>{" "}
-            <br />
-            <Text>
-              Camera chất lượng, bắt trọn từng khoảng khắc - Cụm 4 camera với
-              cảm biến chính lên đến 108 MP
-            </Text>{" "}
-            <br />
-            <Text>
-              Camera chất lượng, bắt trọn từng khoảng khắc - Cụm 4 camera với
-              cảm biến chính lên đến 108 MP
-            </Text>{" "}
+           
             <br />
           </Div4>
           <Div5>
             <Text>
-              Năm 2022 hứa hẹn sẽ là một năm rất đáng trông đợi đối với những ai
-              là fan của thương hiệu điện thoại Samsung. Mới đây, hãng sẽ tiếp
-              tục cho ra mắt nhiều smartphone với sự cải tiến trong thiết kế và
-              cấu hình, trong đó phải kể đến chiếc Samsung Galaxy A73 với nhiều
-              cải tiến so với thế hệ trước. Vậy sản phẩm có gì nổi bật, giá bao
-              nhiêu và liệu có nên mua không? Tìm hiểu ngay nhé!
+            <span dangerouslySetInnerHTML={{__html: product?.desc}}></span>
+
             </Text>
           </Div5>
-
-          <Div5>
-            <h3>
-              Đánh giá Samsung A73 - Hiệu năng mượt mà, chụp ảnh chuyên nghiệp
-            </h3>
-            <p>
-              Điện thoại cao cấp nhất dòng Galaxy A series sở hữu nhiều nâng cấp
-              đáng giá so với thế hệ trước, từ ngoại hình cho đến hiệu năng, đặc
-              biệt là hệ thống camera. Sau đây là những đánh giá chi tiết về
-              chiếc
-            </p>
-          </Div5>
-          <Div5>
-            <h3>Thiết kế sang trọng, màn hình Super AMOLED</h3>
-            <p>
-              Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan
-              tâm đến thiết kế sản phẩm trước. Với phiên bản A73, Samsung đã tạo
-              nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng
-              và tinh tế.
-            </p>
-            <p>
-              Samsung Galaxy A73 được thiết kế gọn nhẹ với tiêu chí đáp ứng khả
-              năng mang theo để tiện đi lại cho người dùng. Giờ đây, bạn có thể
-              mang theo chiếc smartphone bên cạnh đến bất cứ đâu, bất cứ lúc
-              nào.
-            </p>
-            <p>
-              Kích thước và trọng lượng của chiếc điện thoại rất vừa phải và dĩ
-              nhiên sẽ không chiếm quá nhiều diện tích trong túi xách và có thể
-              di chuyển dễ dàng.
-            </p>
-          </Div5>
+          
+          
+         
           <Div6>
             <button>Xem thêm</button>
           </Div6>
@@ -355,6 +310,10 @@ const DetailPage = () => {
     </>
   );
 };
+const Spann = styled.span`
+
+ 
+`
 const Ima = styled.img`
   height: 358px;
   width: 358px;
