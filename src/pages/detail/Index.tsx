@@ -92,20 +92,19 @@ const DetailPage = () => {
             <Col span={14}>
               <div>
                 <Row>
-                  <Col span={8}>
+                  <Col span={7}>
                     <Title level={2} type="danger">
                     {product?.saleOffPrice.toLocaleString()} đ
                     </Title>
                   </Col>
                   <Col span={4}>
-                    <Text><Spann>{product?.originalPrice.toLocaleString()}</Spann> đ</Text>
+                    <Text><Spann>{product?.originalPrice.toLocaleString()}đ</Spann> </Text>
                   </Col>
                 </Row>
               </div>
               <div>
                 <Text>
-                
-                <span dangerouslySetInnerHTML={{__html: product?. brief}}></span>
+                <span dangerouslySetInnerHTML={{__html: product?. feature}}></span>
                 </Text>
               </div>
 
@@ -286,7 +285,7 @@ const DetailPage = () => {
           <Div4>
             <H33>ĐẶC ĐIỂM NỔI BẬT</H33>
             <Text>
-            <span dangerouslySetInnerHTML={{__html: product?.brief}}></span>
+            <span dangerouslySetInnerHTML={{__html: product?.feature}}></span>
 
             </Text>{" "}
             <br />
@@ -311,12 +310,14 @@ const DetailPage = () => {
   );
 };
 const Spann = styled.span`
-
+   font-size:20px;
+   text-decoration: line-through;
  
 `
 const Ima = styled.img`
-  height: 358px;
-  width: 358px;
+padding: 50px;
+  height: 300px;
+  width: 300px;
   left: 326px;
   top: 189px;
   border-radius: 0px;
@@ -367,6 +368,8 @@ const Bot = styled.button`
   background-color: red;
   padding: 10px 100px 10px 100px;
   border-radius: 5px;
+  border: red solid 1px;
+  color: white;
 `;
 
 const Bot1 = styled.button`

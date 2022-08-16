@@ -1,23 +1,7 @@
 import { InboxOutlined, PlusSquareOutlined } from "@ant-design/icons";
-import {
-  Button,
-  Card,
-  Col,
-  Form,
-  Input,
-  InputNumber,
-  PageHeader,
-  Row,
-  Select,
-  Upload,
-  UploadFile,
-  UploadProps,
-} from "antd";
-import Meta from "antd/lib/card/Meta";
+import { Button, Col, Form, Input, Row, Select, UploadFile, UploadProps,} from "antd";
 import TextArea from "antd/lib/input/TextArea";
-import { RcFile } from "antd/lib/upload";
 import Dragger from "antd/lib/upload/Dragger";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";

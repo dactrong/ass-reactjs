@@ -41,6 +41,7 @@ const styles: React.CSSProperties = {
   padding: "10px 0",
   color: "#ffffff",
 };
+
 type Props = {};
 
 const Homepage = (props: Props) => {
@@ -139,171 +140,171 @@ const Homepage = (props: Props) => {
         </Row>
       </Section>
       <Section>
-        <Divider orientation="left">Horizontal</Divider>
+        <Divider orientation="left"><h2>Sản phẩm nổi bật </h2></Divider>
         <Dt>
           <Row gutter={[16, 24]}>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#17c3e6',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#D2691E',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#a8c163',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#e49546',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#F5DEB3',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#00BFFF',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#40E0D0',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#ADFF2F',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'red',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#3af437',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#df258e',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#FF8C00',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#F08080',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#BA55D3',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#FF69B4',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
           </Row>
         </Dt>
-        <Divider orientation="left">Horizontal</Divider>
+        <Divider orientation="left"><h2>Phụ kiện điện thoại </h2></Divider>
         <Dt>
           <Row gutter={[16, 24]}>
-            <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+          <Col className="gutter-row" span={3}>
+              <Bo style={{backgroundColor:'#960af4',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#ecb860',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#d84b9b',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#14e88f',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#15a7c8',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#dd2e5f',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#17b762',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Bo style={styles}>
-                <Text style={styles}>72 đánh giá</Text>
+              <Bo style={{backgroundColor:'#e25e17',padding: "10px 0",}}>
+                <Text style={{color:'white'}}>72 đánh giá</Text>
                 <br />
                 <img alt="example" src={LogoImage1} />
               </Bo>
